@@ -1,0 +1,337 @@
+/* 首页样式 */
+/* banner */
+.banner{ 
+    height: 500px;
+    background-color: #f5f5f5;
+}
+.banner .wrapper{
+    /* 子绝父相 */
+    position: relative;
+    height: 500px;
+    background-color: pink;
+}
+/* 测导航 */
+.banner .wrapper .aside{
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 250px;
+    height: 500px;
+    background-color: #000;
+    opacity: 0.8;
+}
+.banner .wrapper .aside li{
+    height: 50px;
+    line-height: 50px;
+}
+.banner .wrapper .aside li a{
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 50px;
+    padding-left: 36px;
+    padding-right: 19px;
+    height: 50px;
+    color: #fff;
+}
+.banner .wrapper .aside li a span{
+    margin-left: 15px;
+    font-size: 14px;
+}
+.banner .wrapper .aside li a:hover{
+    background-color: green;
+}
+/* 添加伪元素标签 */
+.banner .wrapper .aside li a::after{
+    position: absolute;
+    right: 19px;
+    top: 19px;
+    content: "";
+    width: 6px;
+    height: 13px;
+    /* background-color: pink; */
+    background-image: url(../images/sprites.png);
+    background-position: -40px -110px;
+}
+/* 箭头 */
+.prev,
+.next
+{   position: absolute;
+    top: 228px;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+/* 背景图位置负责两件事：改变箭头在盒子里面的位置；
+改变精灵图的位置
+导致在精灵图中测量的尺寸不准确
+ 解决方法有两种，1，将箭头用span标签，
+ 2，使用谷歌调试工具调试位置*/
+.prev{
+    left: 260px;
+    background-image: url(../images/sprites.png);
+    background-position: 13px -60px;
+}
+.next{
+    right: 10px;
+    background-image: url(../images/sprites.png);
+    background-position: -26px -60px;
+}
+/* 圆点样式 */
+.banner .wrapper ol{
+    position: absolute;
+    left: 680px;
+    bottom: 31px;
+    height: 10px;
+    width: 200px;
+    /* background-color: pink; */
+}
+.banner ol li{
+    float: left;
+    margin-right: 24px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    opacity: 0.4;
+    border-radius: 50%;
+    /* 鼠标悬浮显示小手 */
+    cursor: pointer;
+}
+.banner ol li:hover{
+    background-color: #fff;
+}
+.banner ol .active{
+    background-color: #fff;
+}
+/* 新鲜好物 */
+.goods .hd{
+    height: 114px;
+    /* background-color: pink; */
+    line-height: 114px;
+}
+.goods .hd h2{
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+    height: 114px;
+}
+.goods .hd h2 span{
+
+    font-size: 16px;
+    color: #999;
+    margin-left: 34px;
+}
+.goods .hd a{
+    position: relative;
+    float: right;
+    color: #999;
+    
+}
+.goods .hd a::after{
+    content: "";
+    display: inline-block;
+    margin-left: 15px;
+    /* position: absolute; */
+    width: 7px;
+    height: 13px;
+    /* background-color: pink; */
+    background-image: url(../images/sprites.png);
+    background-position: 0px -110px;
+    /* 水平对齐 */
+    vertical-align: middle;
+}
+/* 新鲜好物 bd */
+.goods .bd li{
+    position: relative;
+    float: left;
+    margin-right: 6px;
+    width: 304px;
+    height: 405px;
+    background-color:#f0f9f4;
+    text-align: center;
+    transition: top .3s , box-shadow .3s;
+    /* #f0f9f4; */
+}
+.goods .bd li:hover{
+    top: -3px;
+    box-shadow: 0 3px 8px rgba(0,0,0,.2);
+}
+.goods .bd li:last-child{
+    margin-right: 0;
+}
+.goods .bd li a img{
+    width: 304px;
+}
+.goods .bd li a h3{
+    margin:20px 0 15px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+}
+.goods .bd li a div{
+    color: #9a2e1f;
+    font-size: 17px;
+}
+.goods .bd li a div span{
+    font-size: 20px;
+}
+/* 新品，定位 */
+.goods .bd b{
+    position: absolute;
+    left: 17px;
+    top: 18px;
+    width: 28px;
+    height: 51px;
+    border: 1px solid #27ba9b;
+    font-size: 18px;
+    font-weight: 400;
+    color: #27ba9b;
+    border-radius: 3px;
+    line-height: 24px;
+}
+/* 人气推荐*/
+.popgoods .pophd{
+    height: 114px;
+    /* background-color: pink; */
+    line-height: 114px;
+}
+.popgoods .pophd h2{
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+    height: 114px;
+}
+.popgoods .pophd h2 span{
+    font-size: 16px;
+    margin-left: 36px;
+    color: #999;
+}
+.popgoods .pophd a{
+    position: relative;
+    float: right;
+    color: #999;
+}
+.popgoods .pophd a::after{
+    content: "";
+    display: inline-block;
+    margin-left: 15px;
+    /* position: absolute; */
+    width: 7px;
+    height: 13px;
+    /* background-color: pink; */
+    background-image: url(../images/sprites.png);
+    background-position: 0px -110px;
+    /* 水平对齐 */
+    vertical-align: middle;
+}
+.popgoods .popbd li{
+    position: relative;
+    float: left;
+    margin-right: 6px;
+    width: 304px;
+    height: 405px;
+    background-color:#f0f9f4;
+    text-align: center;
+    /* 添加鼠标悬停动画 */
+    /* transition: top .3s , box-shadow .3s; */
+}
+/* .popgoods .popbd li:hover{
+    top: -3px;
+    box-shadow: 0 3px 8px rgba(0,0,0,.2);
+} */
+.popgoods .popbd li img{
+    width: 304px;
+    height: 405px;
+}
+.popgoods .popbd li span{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 28px;
+    height: 51px;
+    border: 1px solid #27ba9b;
+    font-size: 18px;
+    font-weight: 400;
+    color: #27ba9b;
+    border-radius: 3px;
+    line-height: 24px;
+}
+/* 生鲜 */
+.fresh .fhd{
+    height: 96px;
+    /* background-color: pink; */
+    line-height: 96px;
+}
+.fresh .fhd h2{
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+}
+.fresh .fhd .more{
+    float: right;
+    color: #999;
+}
+.fresh .fhd .more::after{
+    content: "";
+    display: inline-block;
+    margin-left: 15px;
+    /* position: absolute; */
+    width: 7px;
+    height: 13px;
+    /* background-color: pink; */
+    background-image: url(../images/sprites.png);
+    background-position: 0px -110px;
+    /* 水平对齐 */
+    vertical-align: middle;
+}
+.fresh .fhd ul{
+    float: right;
+    margin-right: 65px;
+}
+.fresh .fhd li{
+    float: left;
+    margin-left: 20px;
+}
+.fresh .fhd li a{
+   padding: 2px 7px;
+   margin: 0 6px;
+}
+.fresh .fhd li a:hover{
+    color: #fff;
+    background-color: #27ba9b;
+}
+/* banner */
+.fbd .left{
+    float: left;
+    width: 240px;
+    height: 610px;
+    background-color: pink;
+}
+.fbd .right{
+    float: left;
+    width: 1000px;
+    height: 610px;
+    /* background-color: skyblue; */
+}
+
+.fbd .right li{
+    display: inline-block;
+    margin-left: 10px;
+    width: 230px;
+    height: 305px;
+    transition: all 1s;
+}
+/* 选择前四个 */
+.fbd .right li:nth-child(4-n){
+    margin-bottom: 6px;
+}
+.fbd .right li:hover{
+    border: 2px solid green;
+    
+}
+.fbd .right li img{
+    width: 184px;
+    height: 184px;
+    /* height: 379px; */
+}
