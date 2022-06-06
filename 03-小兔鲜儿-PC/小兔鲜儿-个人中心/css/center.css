@@ -1,0 +1,317 @@
+*{
+    box-sizing: border-box;
+}
+.xtx_body{
+    padding: 30px 0 85px;
+    background-color: #f6f6f6;
+}
+.xtx_body .wrapper{
+    display: flex;
+}
+/* 侧边栏 */
+.xtx_body .aside{
+    margin-right: 18px;
+    width: 227px;
+    min-height: 500px;
+    background-color: #fff;
+}
+.aside .pic{
+    padding:  47px 76px 0 66px;
+    width: 230px;
+    height: 230px;
+}
+.aside .pic .picimg{
+    width: 85px;
+    height: 85px;
+}
+.aside .pic p{
+    margin-top: 11px;
+    text-align: center;
+}
+.aside .pic .user{
+    margin-top: 12px;
+    display: block;
+    width: 93px;
+	height: 26px;
+	background-color: #e4973c;
+	border-radius: 13px;
+    text-align: center;
+    line-height: 26px;
+}
+.aside .pic .user img{
+    width: 15px;
+	height: 16px;
+    vertical-align: middle;
+}
+.aside .pic .user span{
+    font-size: 14px;
+	color: #f9f9f9;
+}
+.account {
+    padding-left: 75px;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.account dt {
+    margin: 32px 0;
+    font-size: 18px;
+}
+
+.account dd {
+    height: 42px;
+}
+
+.account dd a {
+    position: relative;
+    color: #666;
+}
+.account dd a::before{
+    position: absolute;
+    content: "";
+    left: -15px;
+    top: 4px;
+    width: 6px;
+	height: 6px;
+    background-color: #5eb69c;
+    border-radius: 50%;
+    opacity: 0;
+}
+.account dd a:hover{
+     color: #5eb69c;
+}
+
+.account dd a:hover::before{
+    opacity: 1;
+}
+
+/* 内容 */
+.xtx_body .main{
+    flex: 1;
+    min-height: 500px;
+    /* background-color: skyblue; */
+}
+.xtx_body .main .top1{
+    display: flex;
+    padding: 19px 78px 22px 88px;
+    margin-bottom: 18px;
+    background-color: #fff;
+    height: 132px;
+}
+.xtx_body .main .top1 div{
+    /* 把父级均分 */
+    flex: 1;
+    display: flex;
+    /* 设置子级间间距相同 */
+    justify-content: space-evenly;
+    align-items:center;
+    text-align: center;
+}
+.xtx_body .top1 div:first-child{
+    border-right: 1px solid  #f4f4f4;;
+
+}
+.top1 div a img{
+    width: 25px;
+}
+.top1 div a:last-child img{
+    width: 18px;
+}
+.top1 div a p{
+    margin-top: 10px;
+}
+.top1 div a span{
+    font-size: 25px;
+	color: #e05e30;
+}
+/* 第二部分 */
+.top2,
+.top3,
+.top4{
+    padding: 28px 17px 28px 19px;
+    height: 392px;
+    background-color: #fff;
+}
+/* 第二部分头部 */
+.top2 .top2head,
+.top3 .top3head,
+.top4 .top4head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 71px;
+    /* border-bottom: 1px solid black; */
+}
+.top2 .top2head h2,
+.top3 .top3head h2,
+.top4 .top4head h2{
+    font-size: 22px;
+	font-weight: normal;
+	color: #333333;
+}
+.top2 .top2head a,
+.top3 .top3head a,
+.top4 .top4head a{
+    position: relative;
+    color: #999999;
+}
+.top2 .top2head a i,
+.top3 .top3head a i,
+.top4 .top4head a i{
+    margin-left: 3px;
+}
+/* 第二部分身体 */
+.top2bottom li{
+    height: 137px;
+    border: solid 1px #f4f4f4;
+}
+.top2bottom li:first-child{
+    margin-bottom: 20px;
+}
+
+/* 订单区域 */
+.top2bottom ul li{
+    display: flex;
+}
+.top2bottom .goods{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 17px 0 14px 12px;
+    margin-right: 120px;
+}
+.top2bottom .goods .pic{
+    margin-right: 5px;
+    width: 107px;
+    height: 107px;
+}
+.top2bottom .goods .txt{
+    flex: 1;
+    /* 为了溢出的时候显示省略号 */
+    width: 0;
+}
+.top2bottom .goods .txt h2{
+    /* 设置省略号 */
+    text-overflow: ellipsis;
+    /* 强制在一行显示所有文本 */
+    white-space: nowrap;
+    overflow: hidden;
+
+    margin-bottom: 13px;
+    font-size: 16px;
+	font-weight: normal;
+}
+
+
+.top2bottom .goods .txt p{
+    font-size: 14px;
+	color: #999999;
+}
+
+
+
+.top2bottom .status{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 120px;
+}
+.top2bottom .status i{
+    font-size: 14px;
+	color: #e05e30;
+}
+.top2bottom .pay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+
+    width: 200px;
+    border-left: 1px solid #f4f4f4;
+    border-right: 1px solid #f4f4f4;
+}
+.top2bottom .pay .txt1{
+    font-size: 14px;
+	color: #9a2e1f;
+}
+.top2bottom .pay .txt2{
+    font-size: 14px;
+	color: #333333;
+}
+
+.top2bottom .action{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 180px;
+}
+.top2bottom .action a{
+    display: block;
+    margin-bottom: 16px;
+    width: 100px;
+	height: 30px;
+	background-color: #5eb69c;
+	border-radius: 2px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+}
+
+.top3{
+    margin: 20px 0;
+}
+.top3 .top3head,
+.top4 .top4head{
+    border-bottom: 1px solid #e8e8e8;;
+}
+.top3 .top3bottom,
+.top4 .top4bottom{
+    display: flex;
+    padding: 22px 45px 35px 49px;
+}
+.top3 .top3bottom div,
+.top4 .top4bottom div{
+    flex: 1;
+}
+.top3 .top3bottom .pic,
+.top4 .top4bottom .pic{
+    width: 160px;
+    height: 160px;
+    margin-bottom: 18px;
+}
+.top3 .top3bottom .txt h3,
+.top4 .top4bottom .txt h3{
+    font-size: 16px;
+    font-weight: 400;
+
+}
+.top3 .top3bottom .txt p,
+.top4 .top4bottom .txt p{
+    font-size: 22px;
+	color: #9a2e1f;
+}
+.top3 .top3bottom .txt p i
+.top4 .top4bottom .txt p i{
+    font-size: 17px;
+}
+/* 第二个图添加定位使用伪元素添加标签 */
+.dingwei{
+    position: relative;
+}
+.dingwei::after{
+    position: absolute;
+    left: 0;
+    top: 3px;
+    content: "六折";
+    /* padding: 9px; */
+    width: 28px;
+	height: 51px;
+	border-radius: 3px;
+	border: solid 3px #5eb69c;
+    font-size: 18px;
+	color: #5eb69c;
+    text-align: center;
+}
